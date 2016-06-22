@@ -1,0 +1,129 @@
+/*
+ * Copyright (C) 2012 Texas Instruments Incorporated - http://www.ti.com/
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ *
+ * Version is based on board ID. For the LCD board it is 1.
+ */
+/dts-v1/;
+#include <dt-bindings/gpio/gpio.h>
+
+#include "am33xx.dtsi"
+#include "am335x-the-element-common.dtsi"
+
+/ {
+	model = "Printr AM335x The Element with LCD";
+	compatible = "ti,am335x-the-element", "ti,am33xx";
+
+	panel {
+		status = "okay";
+		compatible = "ti,tilcdc,panel";
+		pinctrl-names = "default";
+		pinctrl-0 = <&lcd_panel_pins_default &lcd_panel_disen_pins_default>;
+		panel-info {
+			ac-bias           = <255>;
+			ac-bias-intrpt    = <0>;
+			dma-burst-sz      = <16>;
+			bpp               = <16>;
+			fdd               = <0x80>;
+			sync-edge         = <1>;
+			sync-ctrl         = <1>;
+			raster-order      = <0>;
+			fifo-th           = <0>;
+		};
+		display-timings {
+			native-mode = <&timing0>;
+			/* YUNLEA ELECTRONICS CO.,LTD YL-S99816D */
+			timing0: 480x272 {
+				clock-frequency = <9200000>;
+				hactive = <480>;
+				vactive = <272>;
+				hfront-porch = <2>;
+				hback-porch = <2>;
+				hsync-len = <41>;
+				vback-porch = <2>;
+				vfront-porch = <2>;
+				vsync-len = <10>;
+				hsync-active = <0>;
+				vsync-active = <0>;
+				de-active = <1>;
+				pixelclk-active = <0>;
+			};
+		};
+	};
+};
+
+&am33xx_pinmux {
+	lcd_panel_pins_default: lcd_panel_pins_default {
+		pinctrl-single,pins = <
+			0xe0 ( PIN_OUTPUT | MUX_MODE0 ) /* (U5) lcd_vsync.lcd_vsync */
+			0xe4 ( PIN_OUTPUT | MUX_MODE0 ) /* (R5) lcd_hsync.lcd_hsync */
+			0xe8 ( PIN_OUTPUT | MUX_MODE0 ) /* (V5) lcd_pclk.lcd_pclk */
+			0xec ( PIN_OUTPUT | MUX_MODE0 ) /* (R6) lcd_ac_bias_en.lcd_ac_bias_en */
+			0xa0 ( PIN_OUTPUT | MUX_MODE0 ) /* (R1) lcd_data0.lcd_data0 */
+			0xa4 ( PIN_OUTPUT | MUX_MODE0 ) /* (R2) lcd_data1.lcd_data1 */
+			0xa8 ( PIN_OUTPUT | MUX_MODE0 ) /* (R3) lcd_data2.lcd_data2 */
+			0xac ( PIN_OUTPUT | MUX_MODE0 ) /* (R4) lcd_data3.lcd_data3 */
+			0xb0 ( PIN_OUTPUT | MUX_MODE0 ) /* (T1) lcd_data4.lcd_data4 */
+			0xb4 ( PIN_OUTPUT | MUX_MODE0 ) /* (T2) lcd_data5.lcd_data5 */
+			0xb8 ( PIN_OUTPUT | MUX_MODE0 ) /* (T3) lcd_data6.lcd_data6 */
+			0xbc ( PIN_OUTPUT | MUX_MODE0 ) /* (T4) lcd_data7.lcd_data7 */
+			0xc0 ( PIN_OUTPUT | MUX_MODE0 ) /* (U1) lcd_data8.lcd_data8 */
+			0xc4 ( PIN_OUTPUT | MUX_MODE0 ) /* (U2) lcd_data9.lcd_data9 */
+			0xc8 ( PIN_OUTPUT | MUX_MODE0 ) /* (U3) lcd_data10.lcd_data10 */
+			0xcc ( PIN_OUTPUT | MUX_MODE0 ) /* (U4) lcd_data11.lcd_data11 */
+			0xd0 ( PIN_OUTPUT | MUX_MODE0 ) /* (V2) lcd_data12.lcd_data12 */
+			0xd4 ( PIN_OUTPUT | MUX_MODE0 ) /* (V3) lcd_data13.lcd_data13 */
+			0xd8 ( PIN_OUTPUT | MUX_MODE0 ) /* (V4) lcd_data14.lcd_data14 */
+			0xdc ( PIN_OUTPUT | MUX_MODE0 ) /* (T5) lcd_data15.lcd_data15 */
+		>;
+	};
+
+	lcd_panel_disen_pins_default: lcd_panel_disen_pins_default {
+		pinctrl-single,pins = <
+			0x98 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (U6) gpmc_wen.gpio2[4] */
+		>;
+	};
+
+	ctp_pins_default: ctp_pins_default {
+		pinctrl-single,pins = <
+			0x40 ( PIN_OUTPUT_PULLDOWN | MUX_MODE7 ) /* (R13) gpmc_a0.gpio1[16] CTP-RESET */
+			0x50 ( PIN_INPUT_PULLDOWN | MUX_MODE7 ) /* (R14) gpmc_a4.gpio1[20] CTP-INT*/
+		>;
+	};
+};
+
+/* Enable the LCD controller */
+&lcdc {
+	status = "okay";
+};
+
+&sgx {
+	status = "okay";
+};
+
+/* Add backlight control for the LCD */
+&i2c0 {
+	tps: tps@24 {
+		backlight {
+			isel = <1>;		/* 1 - ISET1, 2 ISET2 */
+			fdim = <200>;	/* TPS65217_BL_FDIM_200HZ (100, 200, 500, 1000)*/
+			default-brightness = <50>;
+		};
+	};
+
+	captouch: edt-ft5x06@38 {
+		compatible = "edt,edt-ft5206", "edt,edt-ft5x06";
+		reg = <0x38>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&ctp_pins_default>;
+		interrupt-parent = <&gpio1>;
+		interrupts = <20 IRQ_TYPE_EDGE_FALLING>;
+		reset-gpios = <&gpio1 16 GPIO_ACTIVE_LOW>;
+		/*wake-gpios = <&gpio4 9 GPIO_ACTIVE_LOW>;*/
+		touchscreen-size-x = <480>;
+		touchscreen-size-y = <272>;
+	};
+};
