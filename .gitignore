@@ -112,3 +112,15 @@ all.config
 
 # Kdevelop4
 *.kdev4
+
+# Kernel generated defconfig
+/defconfig
+
+# Output directory
+/out
+
+# Allow all in extra added files
+!linux-devkit/**
+!omap5-sgx-ddk-um-linux/**
+!extra_firmware/**
+!extra_patches/**
