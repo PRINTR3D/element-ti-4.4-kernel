@@ -1,0 +1,13 @@
+Package: libssp0
+Version: 2.19-2014.08-1-git-r0-arago28
+Description: external-linaro-toolchain version 4.9-2015.05-r0-arago28
+ external-linaro-toolchain version 4.9-2015.05-r0-arago28.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: external-linaro-toolchain
+Depends: libc6 (>= 2.19-2014.08-1-git)
+Provides: libssp
+Source: file://SUPPORTED

@@ -1,0 +1,15 @@
+Package: qtdeclarative-dev
+Version: 5.5.0+git0+cc0df64bb0-r0
+Description: qtdeclarative version 5.5.0+gitAUTOINC+cc0df64bb0-r0 - Development files
+ qtdeclarative version 5.5.0+gitAUTOINC+cc0df64bb0-r0.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GFDL-1.3 & BSD & (LGPL-2.1 & Digia-Qt-LGPL-Exception-1.1 | LGPL-3.0)
+Architecture: cortexa8hf-vfp-neon
+OE: qtdeclarative
+Depends: qtdeclarative (= 5.5.0+git0+cc0df64bb0-r0)
+Recommends: libgcc-s-dev, libstdc++-dev, qtbase-dev, libc6-dev, libqt5xmlpatterns-dev, omap5-sgx-ddk-um-linux-dev
+Source: git://code.qt.io/qt/qtdeclarative.git;branch=5.5 file://0001-qmltestexample-fix-link.patch

@@ -1,0 +1,14 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 Sql
+Description: Qt Sql module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5Sql 
+Libs.private:  -lQt5Core -lpthread   
+Cflags: -I${includedir}/QtSql -I${includedir}
+Requires: Qt5Core
+

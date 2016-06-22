@@ -1,0 +1,15 @@
+Package: cryptodev-module
+Version: 1.6-r0-arago6
+Description: A /dev/crypto device driver kernel module
+ A /dev/crypto device driver kernel module.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: am335x_evm
+OE: cryptodev-module
+Homepage: http://cryptodev-linux.org/
+Depends: kernel-module-cryptodev
+Replaces: ocf-linux
+Conflicts: ocf-linux
+Source: http://download.gna.org/cryptodev-linux/cryptodev-linux-1.6.tar.gz file://0001-Disable-installing-header-file-provided-by-another-p.patch file://0002-In-the-3.13-rc1-Linux-kernel-the-INIT_COMPLETION-mac.patch file://0001-ioctl.c-Fix-build-on-3.19.patch file://0001-allow-for-cross-compiling-cryptodev.patch

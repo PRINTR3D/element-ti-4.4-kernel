@@ -1,0 +1,11 @@
+Package: kernel-devicetree
+Version: 4.1.13+git0+8dc66170d9-r22c
+Description: linux-processor-sdk version 4.1.13+gitAUTOINC+8dc66170d9-r22c
+ Linux kernel for TI devices
+Section: kernel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: am335x_evm
+OE: linux-processor-sdk
+Source: file://configs file://cmem.dtsi git://git.ti.com/processor-sdk/processor-sdk-linux.git;protocol=git;branch=processor-sdk-linux-02.00.01 file://defconfig

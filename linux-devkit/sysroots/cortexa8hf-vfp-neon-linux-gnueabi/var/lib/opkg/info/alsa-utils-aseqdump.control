@@ -1,0 +1,13 @@
+Package: alsa-utils-aseqdump
+Version: 1.0.28-r1
+Description: Shows the events received at an ALSA sequencer port
+ ALSA sound utilities.
+Section: console/utils
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: cortexa8hf-vfp-neon
+OE: alsa-utils
+Homepage: http://www.alsa-project.org
+Depends: libasound2 (>= 1.0.28), libc6 (>= 2.19-2014.08-1-git)
+Source: ftp://ftp.alsa-project.org/pub/utils/alsa-utils-1.0.28.tar.bz2 file://0001-alsactl-don-t-let-systemd-unit-restore-the-volume-wh.patch file://alsa-utils-aplay-interrupt-signal-handling.patch file://assume-storing-is-success-if-not-sound-card-device.patch

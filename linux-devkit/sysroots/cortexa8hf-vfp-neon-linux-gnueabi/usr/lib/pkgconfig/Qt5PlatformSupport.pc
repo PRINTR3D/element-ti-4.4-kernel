@@ -1,0 +1,14 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 PlatformSupport
+Description: Qt PlatformSupport module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5PlatformSupport 
+Libs.private:  -lQt5Gui -lQt5DBus -lQt5Core -lpthread -lqtfreetype -lz -ludev -lrt -lEGL -lIMGegl -ldrm_omap -lGLESv2 -lsrv_um  
+Cflags: -I${includedir}/QtPlatformSupport -I${includedir}
+Requires: Qt5Core Qt5Gui
+

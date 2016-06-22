@@ -1,0 +1,11 @@
+/usr/bin/opkg
+/usr/share/opkg/intercept/update-modules
+/etc/opkg/opkg.conf
+/usr/bin/opkg-key
+/usr/share/opkg/intercept/depmod
+/usr/bin/opkg-cl
+/usr/share/opkg/intercept/
+/etc/opkg/
+/usr/share/opkg/intercept/ldconfig
+/usr/bin/opkg-check-config
+/usr/share/opkg/

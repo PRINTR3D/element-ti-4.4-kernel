@@ -1,0 +1,13 @@
+Package: libsndfile1
+Version: 1.0.25-r2
+Description: Audio format Conversion library
+ Audio format Conversion library.
+Section: libs/multimedia
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2.1
+Architecture: cortexa8hf-vfp-neon
+OE: libsndfile1
+Homepage: http://www.mega-nerd.com/libsndfile
+Depends: libc6 (>= 2.19-2014.08-1-git)
+Source: http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.25.tar.gz file://0001-src-sd2.c-Fix-segfault-in-SD2-RSRC-parser.patch file://0001-src-sd2.c-Fix-two-potential-buffer-read-overflows.patch

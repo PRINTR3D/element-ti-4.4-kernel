@@ -1,0 +1,14 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 QmlDevTools
+Description: Qt QmlDevTools module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5QmlDevTools 
+Libs.private: -L/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr/lib -lQt5Bootstrap -lpthread   
+Cflags: -I${includedir}/QtQmlDevTools -I${includedir}
+Requires: Qt5Bootstrap
+

@@ -1,0 +1,13 @@
+Package: liboil
+Version: 0.3.17-r5
+Description: Library of simple functions optimized for various CPUs
+ Library of simple functions optimized for various CPUs.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD
+Architecture: cortexa8hf-vfp-neon
+OE: liboil
+Homepage: http://liboil.freedesktop.org/
+Depends: libc6 (>= 2.19-2014.08-1-git)
+Source: http://liboil.freedesktop.org/download/liboil-0.3.17.tar.gz file://no-tests.patch file://fix-unaligned-whitelist.patch file://0001-Fix-enable-vfp-flag.patch file://liboil_fix_for_x32.patch

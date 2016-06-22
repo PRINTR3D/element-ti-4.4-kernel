@@ -1,0 +1,13 @@
+Package: nettle
+Version: 2.7.1-r0
+Description: A low level cryptographic library
+ A low level cryptographic library.
+Section: libs
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2.1 & GPLv2
+Architecture: cortexa8hf-vfp-neon
+OE: nettle
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Depends: libgmp10 (>= 6.0.0), libc6 (>= 2.19-2014.08-1-git)
+Source: http://www.lysator.liu.se/~nisse/archive/nettle-2.7.1.tar.gz

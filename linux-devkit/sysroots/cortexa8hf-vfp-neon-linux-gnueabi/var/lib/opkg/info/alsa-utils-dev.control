@@ -1,0 +1,15 @@
+Package: alsa-utils-dev
+Version: 1.0.28-r1
+Description: ALSA sound utilities - Development files
+ ALSA sound utilities.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: cortexa8hf-vfp-neon
+OE: alsa-utils
+Homepage: http://www.alsa-project.org
+Depends: alsa-utils (= 1.0.28-r1)
+Recommends: alsa-utils-iecset-dev, ncurses-libtinfo-dev, ncurses-libncursesw-dev, alsa-lib-dev, alsa-utils-alsaucm-dev, alsa-utils-midi-dev, alsa-utils-speakertest-dev, alsa-utils-alsaloop-dev, udev-dev, ncurses-libpanelw-dev, alsa-utils-aconnect-dev, libc6-dev, libasound-dev, alsa-utils-amixer-dev, ncurses-dev, ncurses-libformw-dev, alsa-utils-aseqdump-dev, ncurses-libmenuw-dev, alsa-utils-alsamixer-dev, alsa-utils-aseqnet-dev, alsa-utils-aplay-dev, alsa-utils-alsactl-dev, libsamplerate0-dev
+Source: ftp://ftp.alsa-project.org/pub/utils/alsa-utils-1.0.28.tar.bz2 file://0001-alsactl-don-t-let-systemd-unit-restore-the-volume-wh.patch file://alsa-utils-aplay-interrupt-signal-handling.patch file://assume-storing-is-success-if-not-sound-card-device.patch

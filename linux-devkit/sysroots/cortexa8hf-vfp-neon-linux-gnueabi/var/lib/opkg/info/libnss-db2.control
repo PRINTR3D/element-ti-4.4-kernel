@@ -1,0 +1,13 @@
+Package: libnss-db2
+Version: 2.19-2014.08-1-git-r0-arago28
+Description: hesiod, NIS and NIS+ nss libraries
+ glibc: nis, nisplus and hesiod search services.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: external-linaro-toolchain
+Depends: libc6 (>= 2.19-2014.08-1-git)
+Provides: eglibc-extra-nss, glibc-extra-nss
+Source: file://SUPPORTED

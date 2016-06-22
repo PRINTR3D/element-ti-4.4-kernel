@@ -1,0 +1,15 @@
+Package: qtbase-dev
+Version: 5.5.0+git0+2fde9f59ee-r0-arago11.tisdk0
+Description: qtbase version 5.5.0+gitAUTOINC+2fde9f59ee-r0-arago11.tisdk0 - Development files
+ qtbase version 5.5.0+gitAUTOINC+2fde9f59ee-r0-arago11.tisdk0.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GFDL-1.3 & BSD & (LGPL-2.1 & Digia-Qt-LGPL-Exception-1.1 | LGPL-3.0)
+Architecture: cortexa8hf-vfp-neon
+OE: qtbase
+Depends: qtbase (= 5.5.0+git0+2fde9f59ee-r0-arago11.tisdk0)
+Recommends: icu-dev, libicuuc-dev, libicudata-dev, pulseaudio-dev, libgcc-s-dev, libz-dev, jpeg-dev, libssl-dev, openssl-dev, libcrypto-dev, libstdc++-dev, libc6-dev, udev-dev, libicui18n-dev, qtbase-conf-dev, libpng16-dev, omap5-sgx-ddk-um-linux-dev, libdrm-omap-dev, libdrm-dev, libudev-dev, dbus-dev
+Source: git://code.qt.io/qt/qtbase.git;branch=5.5 file://0001-Add-linux-oe-g-platform.patch file://0002-qlibraryinfo-allow-to-set-qt.conf-from-the-outside-u.patch file://0003-Add-external-hostbindir-option.patch file://0004-qt_module-Fix-pkgconfig-and-libtool-replacements.patch file://0005-qeglplatformintegration-Undefine-CursorShape-from-X..patch file://0006-configure-bump-path-length-from-256-to-512-character.patch file://0007-QOpenGLPaintDevice-sub-area-support.patch file://0008-qmake-don-t-build-it-in-configure-but-allow-to-build.patch file://0009-linux-oe-g-Invert-conditional-for-defining-QT_SOCKLE.patch file://qt_env_ti33x.sh file://0001-calculator-Add-exit-button-for-non-window-environmen.patch file://0002-animatedtiles-Add-exit-button-for-non-window-environ.patch file://quit.png file://0001-EGLFS-Disable-SIGTERM-so-that-it-may-be-handled-by-u.patch file://0001-deform-Fix-how-controls-are-shown.patch file://0002-deform-disable-opengl-button.patch

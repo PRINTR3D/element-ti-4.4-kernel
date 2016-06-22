@@ -1,0 +1,12 @@
+Package: qt3d
+Version: 5.5.0+git0+a3b9994175-r0
+Description: qt3d version 5.5.0+gitAUTOINC+a3b9994175-r0
+ qt3d version 5.5.0+gitAUTOINC+a3b9994175-r0.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GFDL-1.3 & LGPL-3.0 & DIGIA-TPLA-2.4 | GPL-2.0
+Architecture: cortexa8hf-vfp-neon
+OE: qt3d
+Depends: libstdc++6 (>= 4.9.3), qtdeclarative (>= 5.5.0+git0+cc0df64bb0), omap5-sgx-ddk-um-linux (>= 1.9.0.12), libgcc-s1 (>= 4.9.3), libc6 (>= 2.19-2014.08-1-git), qtbase (>= 5.5.0+git0+2fde9f59ee)
+Source: git://code.qt.io/qt/qt3d.git;branch=5.5

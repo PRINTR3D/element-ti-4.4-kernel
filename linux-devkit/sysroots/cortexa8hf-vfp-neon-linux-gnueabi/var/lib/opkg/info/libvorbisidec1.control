@@ -1,0 +1,13 @@
+Package: libvorbisidec1
+Version: 20120314-r1
+Description: Fixed-point decoder
+ tremor is a fixed point implementation of the vorbis codec.
+Section: libs
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD
+Architecture: cortexa8hf-vfp-neon
+OE: tremor
+Depends: libogg0 (>= 1.3.2), libc6 (>= 2.19-2014.08-1-git)
+Provides: tremor
+Source: svn://svn.xiph.org/trunk;module=Tremor;rev=18221;protocol=http file://obsolete_automake_macros.patch;striplevel=0 file://tremor-arm-thumb2.patch

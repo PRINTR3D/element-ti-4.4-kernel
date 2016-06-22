@@ -1,0 +1,12 @@
+Package: i2c-tools
+Version: 3.1.1-r0
+Description: Set of i2c tools for linux
+ Set of i2c tools for linux.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: cortexa8hf-vfp-neon
+OE: i2c-tools
+Depends: i2c-tools-misc, libc6 (>= 2.19-2014.08-1-git)
+Source: http://dl.lm-sensors.org/i2c-tools/releases/i2c-tools-3.1.1.tar.bz2 file://Module.mk

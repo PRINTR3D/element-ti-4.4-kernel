@@ -1,0 +1,14 @@
+Package: libc6-staticdev
+Version: 2.19-2014.08-1-git-r0-arago28
+Description: external-linaro-toolchain version 4.9-2015.05-r0-arago28 - Development files (Static Libraries)
+ external-linaro-toolchain version 4.9-2015.05-r0-arago28.  This package
+ contains static libraries for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: external-linaro-toolchain
+Depends: libc6-dev (= 2.19-2014.08-1-git-r0-arago28)
+Provides: eglibc-staticdev, glibc-staticdev, external-linaro-toolchain-staticdev, libc-staticdev
+Source: file://SUPPORTED

@@ -1,0 +1,13 @@
+Package: libc6-utils
+Version: 2.19-2014.08-1-git-r0-arago28
+Description: Miscellaneous utilities provided by glibc
+ Miscellaneous utilities including getconf, iconv, locale, gencat, rpcgen,
+ ...
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: external-linaro-toolchain
+Provides: external-linaro-toolchain-utils, glibc-utils
+Source: file://SUPPORTED

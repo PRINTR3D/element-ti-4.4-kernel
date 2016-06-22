@@ -1,0 +1,16 @@
+Package: libqt5xmlpatterns-dev
+Version: 5.5.0+git0+ae6504efc8-r0
+Description: qtxmlpatterns version 5.5.0+gitAUTOINC+ae6504efc8-r0 - Development files
+ qtxmlpatterns version 5.5.0+gitAUTOINC+ae6504efc8-r0.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GFDL-1.3 & BSD & (LGPL-2.1 & Digia-Qt-LGPL-Exception-1.1 | LGPL-3.0)
+Architecture: cortexa8hf-vfp-neon
+OE: qtxmlpatterns
+Depends: libqt5xmlpatterns5 (= 5.5.0+git0+ae6504efc8-r0)
+Recommends: qtbase-dev, libc6-dev, libgcc-s-dev, libstdc++-dev
+Provides: qtxmlpatterns-dev
+Source: git://code.qt.io/qt/qtxmlpatterns.git;branch=5.5

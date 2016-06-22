@@ -1,0 +1,16 @@
+Package: pulseaudio-dev
+Version: 6.0-r0-arago0
+Description: Sound server for Linux and Unix-like operating systems - Development files
+ Sound server for Linux and Unix-like operating systems.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+ & LGPLv2.1
+Architecture: cortexa8hf-vfp-neon
+OE: pulseaudio
+Homepage: http://www.pulseaudio.org
+Depends: libpulse0, libpulse-mainloop-glib0, libpulse-simple0, pulseaudio (= 6.0-r0-arago0)
+Recommends: pulseaudio-module-card-restore-dev, base-passwd-dev, libltdl-dev, speex-dev, libpulse-dev, libz-dev, ofono-dev, base-files-dev, pulseaudio-module-intended-roles-dev, libpulsecore-dev, pulseaudio-lib-alsa-util-dev, libffi-dev, pulseaudio-module-cli-protocol-unix-dev, libavahi-client-dev, alsa-lib-dev, pulseaudio-lib-protocol-simple-dev, pulseaudio-module-rescue-streams-dev, pulseaudio-module-detect-dev, pulseaudio-module-alsa-sink-dev, bluez4-dev, pulseaudio-module-filter-heuristics-dev, pulseaudio-lib-cli-dev, pulseaudio-lib-avahi-wrap-dev, pulseaudio-module-stream-restore-dev, pulseaudio-module-null-sink-dev, libudev-dev, libcap-dev, avahi-dev, pulseaudio-lib-rtp-dev, sbc-dev, dbus-dev, pulseaudio-lib-bluez4-util-dev, pulseaudio-module-default-device-restore-dev, pulseaudio-module-always-sink-dev, libavahi-common-dev, udev-dev, pulseaudio-lib-protocol-esound-dev, libpulsecommon-dev, libdbus-glib-1-dev, gconf-dev, libc6-dev, pulseaudio-module-role-cork-dev, libasound-dev, pulseaudio-module-device-restore-dev, libpulse-simple-dev, pulseaudio-lib-protocol-cli-dev, libsndfile-dev, pulseaudio-module-alsa-card-dev, pulseaudio-lib-protocol-native-dev, pulseaudio-module-alsa-source-dev, pulseaudio-module-augment-properties-dev, shadow-dev, pulseaudio-module-switch-on-port-available-dev, shadow-sysroot-dev, pulseaudio-lib-protocol-http-dev, dbus-lib-dev, libglib-2.0-dev, consolekit-dev, pulseaudio-module-udev-detect-dev, liboil-dev, libpulse-mainloop-glib-dev, libgdbm-dev, pulseaudio-module-native-protocol-unix-dev, pulseaudio-lib-oss-util-dev, pulseaudio-module-filter-apply-dev, pulseaudio-module-position-event-sounds-dev, libtool-dev, libjson-c-dev, pulseaudio-module-suspend-on-idle-dev, libatomics-ops-dev
+Source: http://freedesktop.org/software/pulseaudio/releases/pulseaudio-6.0.tar.xz file://volatiles.04_pulse

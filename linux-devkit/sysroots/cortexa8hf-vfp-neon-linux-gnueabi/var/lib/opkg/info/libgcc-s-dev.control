@@ -1,0 +1,13 @@
+Package: libgcc-s-dev
+Version: 4.9.3-r0-arago28
+Description: external-linaro-toolchain version 4.9-2015.05-r0-arago28
+ external-linaro-toolchain version 4.9-2015.05-r0-arago28.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: external-linaro-toolchain
+Recommends: libc6-dev, linux-libc-headers-dev
+Provides: libgcc-dev
+Source: file://SUPPORTED

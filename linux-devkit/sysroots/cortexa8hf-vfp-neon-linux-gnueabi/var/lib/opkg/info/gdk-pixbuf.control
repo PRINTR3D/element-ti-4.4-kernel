@@ -1,0 +1,13 @@
+Package: gdk-pixbuf
+Version: 2.30.8-r0
+Description: Image loading library for GTK+
+ Image loading library for GTK+.
+Section: libs
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2
+Architecture: cortexa8hf-vfp-neon
+OE: gdk-pixbuf
+Homepage: http://www.gtk.org/
+Depends: libglib-2.0-0 (>= 2.42.1), libffi6 (>= 3.2.1), libz1 (>= 1.2.8), libpng16-16 (>= 1.6.16), libc6 (>= 2.19-2014.08-1-git)
+Source: http://ftp.gnome.org/pub/GNOME/sources/gdk-pixbuf/2.30/gdk-pixbuf-2.30.8.tar.xz file://hardcoded_libtool.patch file://extending-libinstall-dependencies.patch file://run-ptest file://fatal-loader.patch file://0001-pixops-Be-more-careful-about-integer-overflow.patch

@@ -1,0 +1,12 @@
+Package: qtwebkit
+Version: 5.5.0+git0+3f0fbb46e2-r0-arago4
+Description: qtwebkit version 5.5.0+gitAUTOINC+3f0fbb46e2-r0-arago4
+ qtwebkit version 5.5.0+gitAUTOINC+3f0fbb46e2-r0-arago4.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD & LGPLv2+ | GPL-2.0
+Architecture: cortexa8hf-vfp-neon
+OE: qtwebkit
+Depends: qtlocation (>= 5.5.0+git0+d2d08b4f04), libxml2 (>= 2.9.2), libz1 (>= 1.2.8), qtdeclarative (>= 5.5.0+git0+cc0df64bb0), libxslt (>= 1.1.28), libqt5sensors5 (>= 5.5.0+git0+414c0a8294), libgcc-s1 (>= 4.9.3), libgstvideo-1.0-0 (>= 1.2.3), libgstaudio-1.0-0 (>= 1.2.3), libsqlite3-0 (>= 3.8.7.4), libstdc++6 (>= 4.9.3), libglib-2.0-0 (>= 2.42.1), libicuuc54 (>= 54.1), libicudata54 (>= 54.1), qtbase (>= 5.5.0+git0+2fde9f59ee), libdrm-omap1 (>= 2.4.59), omap5-sgx-ddk-um-linux (>= 1.9.0.12), libc6 (>= 2.19-2014.08-1-git), libgstpbutils-1.0-0 (>= 1.2.3), libpng16-16 (>= 1.6.16), libicui18n54 (>= 54.1), libjpeg8 (>= 8d+1.4.0), libgstapp-1.0-0 (>= 1.2.3), gstreamer1.0 (>= 1.2.3)
+Source: git://code.qt.io/qt/qtwebkit.git;branch=5.5 file://0001-qtwebkit-fix-QA-issue-bad-RPATH.patch file://0002-Remove-TEXTREL-tag-in-x86.patch file://0003-Exclude-backtrace-API-for-non-glibc-libraries.patch file://GraphicsSurfaceGL_NoX.cpp.patch file://GraphicsSurfaceToken.h.patch file://0001-Target.pri-update-to-use-GL_NoX-version-of-GraphicsS.patch file://WebCore.pri.patch

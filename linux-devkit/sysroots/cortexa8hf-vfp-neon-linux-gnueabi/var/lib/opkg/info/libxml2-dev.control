@@ -1,0 +1,21 @@
+Package: libxml2-dev
+Version: 2.9.2-r0
+Description: XML C Parser Library and Toolkit - Development files
+ The XML Parser Library allows for manipulation of XML files.  Libxml2
+ exports Push and Pull type parser interfaces for both XML and HTML.  It
+ can do DTD validation at parse time, on a parsed document instance or
+ with an arbitrary DTD.  Libxml2 includes complete XPath, XPointer and
+ Xinclude implementations.  It also has a SAX like interface, which is
+ designed to be compatible with Expat.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: libxml2
+Homepage: http://www.xmlsoft.org/
+Depends: libxml2 (= 2.9.2-r0)
+Recommends: libc6-dev, libgcc-s-dev, libz-dev
+Source: ftp://xmlsoft.org/libxml2/libxml2-2.9.2.tar.gz;name=libtar file://libxml-64bit.patch file://ansidecl.patch file://runtest.patch file://run-ptest file://libxml2-CVE-2014-0191-fix.patch file://python-sitepackages-dir.patch file://libxml-m4-use-pkgconfig.patch file://configure.ac-fix-cross-compiling-warning.patch file://0001-CVE-2015-1819-Enforce-the-reader-to-run-in-constant-.patch http://www.w3.org/XML/Test/xmlts20080827.tar.gz;name=testtar file://72a46a519ce7326d9a00f0b6a7f2a8e958cd1675.patch

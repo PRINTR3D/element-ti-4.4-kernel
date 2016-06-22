@@ -1,0 +1,14 @@
+Package: libgnutls28
+Version: 3.3.12-r0-arago0
+Description: GNU Transport Layer Security Library
+ GNU Transport Layer Security Library.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2.1+
+Architecture: cortexa8hf-vfp-neon
+OE: gnutls
+Homepage: http://www.gnu.org/software/gnutls/
+Depends: nettle (>= 2.7.1), libz1 (>= 1.2.8), libgmp10 (>= 6.0.0), libc6 (>= 2.19-2014.08-1-git)
+Provides: gnutls
+Source: ftp://ftp.gnutls.org/gcrypt/gnutls/v3.3/gnutls-3.3.12.tar.xz file://correct_rpl_gettimeofday_signature.patch file://configure.ac-fix-sed-command.patch file://use-pkg-config-to-locate-zlib.patch file://eliminated-double-free-CVE-2015-3308.patch file://better-fix-for-double-free-CVE-2015-3308.patch

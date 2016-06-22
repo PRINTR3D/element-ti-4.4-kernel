@@ -1,0 +1,8 @@
+	if [ ! -e "$D/lib/modules/4.1.13-g8dc6617" ]; then
+		mkdir -p $D/lib/modules/4.1.13-g8dc6617
+	fi
+	if [ -n "$D" ]; then
+		depmodwrapper -a -b $D 4.1.13-g8dc6617
+	else
+		depmod -a 4.1.13-g8dc6617
+	fi

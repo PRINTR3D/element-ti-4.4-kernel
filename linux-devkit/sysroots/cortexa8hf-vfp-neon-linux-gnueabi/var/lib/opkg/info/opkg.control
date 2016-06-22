@@ -1,0 +1,16 @@
+Package: opkg
+Version: 1:0.2.4-r0
+Description: Open Package Manager
+ Open Package Manager.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: cortexa8hf-vfp-neon
+OE: opkg
+Homepage: http://code.google.com/p/opkg/
+Depends: update-alternatives-opkg, opkg-arch-config, run-postinsts, libopkg1 (>= 0.2.4), libc6 (>= 2.19-2014.08-1-git)
+Provides: opkg-collateral
+Replaces: opkg-collateral, opkg-nogpg
+Conflicts: opkg-collateral
+Source: http://downloads.yoctoproject.org/releases/opkg/opkg-0.2.4.tar.gz file://no-install-recommends.patch file://add-exclude.patch file://remove-ACLOCAL_AMFLAGS-I-shave-I-m4.patch file://opkg-configure.service file://opkg.conf file://0001-opkg-key-Backport-improvements.patch

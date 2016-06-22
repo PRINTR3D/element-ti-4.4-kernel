@@ -1,0 +1,19 @@
+Package: util-linux-dev
+Version: 2.25.2-r1
+Description: A suite of basic system administration utilities - Development files
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+ & LGPLv2.1+ & BSD
+Architecture: cortexa8hf-vfp-neon
+OE: util-linux
+Depends: libmount1, libsmartcols1, util-linux (= 2.25.2-r1), libuuid1, libblkid1
+Recommends: util-linux-libsmartcols-dev, util-linux-libuuid-dev, libz-dev, libpam-dev, ncurses-libncursesw-dev, util-linux-libmount-dev, libc6-dev, update-alternatives-opkg-dev, util-linux-libblkid-dev, util-linux-sulogin-dev, ncurses-libtinfo-dev, ncurses-dev, util-linux-losetup-dev, util-linux-umount-dev, util-linux-swaponoff-dev
+Provides: util-linux-libuuid-dev, util-linux-libblkid-dev, util-linux-libmount-dev
+Source: http://kernel.org/pub/linux/utils/util-linux/v2.25/util-linux-2.25.2.tar.xz file://util-linux-ng-replace-siginterrupt.patch file://util-linux-ng-2.16-mount_lock_path.patch file://uclibc-__progname-conflict.patch file://configure-sbindir.patch file://fix-parallel-build.patch file://CVE-2014-9114.patch

@@ -1,0 +1,14 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 Concurrent
+Description: Qt Concurrent module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5Concurrent 
+Libs.private:  -lQt5Core -lpthread -lrt  
+Cflags: -I${includedir}/QtConcurrent -I${includedir}
+Requires: Qt5Core
+

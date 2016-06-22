@@ -1,0 +1,13 @@
+Package: gstreamer1.0-plugins-bad-debugutilsbad
+Version: 1.2.3-r0-arago5
+Description: GStreamer plugin for debugutilsbad
+ GStreamer plugin for debugutilsbad
+Section: multimedia
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+ & LGPLv2+ & LGPLv2.1+ 
+Architecture: am335x_evm
+OE: gstreamer1.0-plugins-bad
+Homepage: http://gstreamer.freedesktop.org/
+Depends: libgstvideo-1.0-0 (>= 1.2.3), libffi6 (>= 3.2.1), libc6 (>= 2.19-2014.08-1-git), libglib-2.0-0 (>= 2.42.1), liborc-0.4-0 (>= 0.4.23), gstreamer1.0 (>= 1.2.3)
+Source: git://git.ti.com/glsdk/gstreamer1-0-plugins-bad.git;protocol=git

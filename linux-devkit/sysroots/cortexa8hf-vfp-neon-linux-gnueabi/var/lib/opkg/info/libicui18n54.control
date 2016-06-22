@@ -1,0 +1,17 @@
+Package: libicui18n54
+Version: 54.1-r0
+Description: International Component for Unicode libraries
+ The International Component for Unicode (ICU) is a mature, portable set
+ of C/C++ and Java libraries for Unicode support, software
+ internationalization (I18N) and globalization (G11N), giving applications
+ the same results on all platforms.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ICU
+Architecture: cortexa8hf-vfp-neon
+OE: icu
+Homepage: http://site.icu-project.org/
+Depends: libicuuc54 (>= 54.1), libstdc++6 (>= 4.9.3), libicudata54 (>= 54.1), libgcc-s1 (>= 4.9.3), libc6 (>= 2.19-2014.08-1-git)
+Provides: libicui18n
+Source: http://download.icu-project.org/files/icu4c/54.1/icu4c-54_1-src.tgz file://icu-pkgdata-large-cmd.patch file://icu-CVE-2014-8146-CVE-2014-8147.patch file://0001-Disable-LDFLAGSICUDT-for-Linux.patch

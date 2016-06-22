@@ -1,0 +1,11 @@
+#!/bin/sh
+
+prefix=/usr
+datarootdir=${prefix}/share
+datadir=/usr/share
+codegendir=${datadir}/pygobject/2.0/codegen
+
+PYTHONPATH=$codegendir
+export PYTHONPATH
+
+exec /home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/x86_64-linux/usr/bin/python-native/python $codegendir/codegen.py "$@"

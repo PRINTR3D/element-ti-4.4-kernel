@@ -1,0 +1,13 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 Bootstrap
+Description: Qt Bootstrap module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5Bootstrap 
+Libs.private: -lpthread   
+Cflags: -I${includedir}/QtBootstrap -I${includedir}
+

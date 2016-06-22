@@ -1,0 +1,5 @@
+/usr/bin/decode-dimms
+/usr/bin/decode-vaio
+/usr/sbin/i2c-stub-from-dump
+/usr/bin/ddcmon
+/usr/bin/decode-edid

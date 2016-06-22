@@ -1,0 +1,1 @@
+	update-alternatives --install /boot/zImage zImage /boot/zImage-4.1.13-g8dc6617 40113 || true

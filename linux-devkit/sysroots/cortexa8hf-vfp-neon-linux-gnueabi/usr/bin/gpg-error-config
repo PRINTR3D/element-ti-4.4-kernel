@@ -1,0 +1,3 @@
+#!/bin/sh
+echo '--should-not-have-used-/usr/bin/gpg-error-config'
+exit 1

@@ -1,0 +1,15 @@
+Package: cracklib-dev
+Version: 2.9.2-r1
+Description: Password strength checker library - Development files
+ Password strength checker library.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2.1+
+Architecture: cortexa8hf-vfp-neon
+OE: cracklib
+Homepage: http://sourceforge.net/projects/cracklib
+Depends: cracklib (= 2.9.2-r1)
+Recommends: libc6-dev, libz-dev
+Source: http://downloads.sourceforge.net/cracklib/cracklib-2.9.2.tar.gz file://0001-packlib.c-support-dictionary-byte-order-dependent.patch file://0002-craklib-fix-testnum-and-teststr-failed.patch

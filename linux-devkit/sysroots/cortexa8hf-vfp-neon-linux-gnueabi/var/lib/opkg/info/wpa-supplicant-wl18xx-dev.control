@@ -1,0 +1,16 @@
+Package: wpa-supplicant-wl18xx-dev
+Version: R8.6-devel-ti+git0+f80fe345ac-r9a
+Description: Client for Wi-Fi Protected Access (WPA) - Development files
+ Client for Wi-Fi Protected Access (WPA).  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2 | BSD
+Architecture: cortexa8hf-vfp-neon
+OE: wpa-supplicant-wl18xx
+Homepage: http://hostap.epitest.fi/wpa_supplicant/
+Depends: wpa-supplicant-wl18xx (= R8.6-devel-ti+git0+f80fe345ac-r9a)
+Recommends: wpa-supplicant-passphrase-dev, libssl-dev, openssl-dev, libnl-genl-dev, libcrypto-dev, libc6-dev, wpa-supplicant-cli-dev, libgnutls-dev, libnl-3-dev, libgcrypt-dev, dbus-dev
+Source: git://git.ti.com/wilink8-wlan/hostap.git;protocol=git;branch=upstream_24 file://defconfig file://wpa-supplicant.sh file://wpa_supplicant.conf file://p2p_supplicant.conf file://99_wpa_supplicant

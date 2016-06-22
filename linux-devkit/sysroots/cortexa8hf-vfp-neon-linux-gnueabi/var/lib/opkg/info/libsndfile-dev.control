@@ -1,0 +1,16 @@
+Package: libsndfile-dev
+Version: 1.0.25-r2
+Description: Audio format Conversion library - Development files
+ Audio format Conversion library.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2.1
+Architecture: cortexa8hf-vfp-neon
+OE: libsndfile1
+Homepage: http://www.mega-nerd.com/libsndfile
+Depends: libsndfile1 (= 1.0.25-r2)
+Recommends: libc6-dev, libasound-dev, libsqlite3-dev, sqlite3-dev, alsa-lib-dev
+Provides: libsndfile1-dev
+Source: http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.25.tar.gz file://0001-src-sd2.c-Fix-segfault-in-SD2-RSRC-parser.patch file://0001-src-sd2.c-Fix-two-potential-buffer-read-overflows.patch

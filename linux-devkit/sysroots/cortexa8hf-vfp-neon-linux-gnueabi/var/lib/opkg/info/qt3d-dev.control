@@ -1,0 +1,15 @@
+Package: qt3d-dev
+Version: 5.5.0+git0+a3b9994175-r0
+Description: qt3d version 5.5.0+gitAUTOINC+a3b9994175-r0 - Development files
+ qt3d version 5.5.0+gitAUTOINC+a3b9994175-r0.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GFDL-1.3 & LGPL-3.0 & DIGIA-TPLA-2.4 | GPL-2.0
+Architecture: cortexa8hf-vfp-neon
+OE: qt3d
+Depends: qt3d (= 5.5.0+git0+a3b9994175-r0)
+Recommends: libgcc-s-dev, qtdeclarative-dev, libstdc++-dev, qtbase-dev, libc6-dev, omap5-sgx-ddk-um-linux-dev
+Source: git://code.qt.io/qt/qt3d.git;branch=5.5

@@ -1,0 +1,14 @@
+Package: pam-plugin-securetty
+Version: 1.1.6-r5
+Description: PAM plugin for -securetty
+ PAM plugin for -securetty
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+ | BSD
+Architecture: cortexa8hf-vfp-neon
+OE: libpam
+Homepage: https://fedorahosted.org/linux-pam/
+Depends: libpam-suffix, libc6 (>= 2.19-2014.08-1-git), libpam (>= 1.1.6)
+Provides: pam-plugin-securetty-suffix
+Source: http://linux-pam.org/library/Linux-PAM-1.1.6.tar.bz2 file://99_pam file://pam.d/common-account file://pam.d/common-auth file://pam.d/common-password file://pam.d/common-session file://pam.d/common-session-noninteractive file://pam.d/other file://libpam-xtests.patch file://destdirfix.patch file://fixsepbuild.patch file://reflect-the-enforce_for_root-semantics-change-in-pam.patch file://add-checks-for-crypt-returning-NULL.patch file://libpam-fix-for-CVE-2010-4708.patch file://pam-security-abstract-securetty-handling.patch file://pam-unix-nullok-secure.patch file://pam_timestamp-fix-potential-directory-traversal-issu.patch file://libpam-xtests-remove-bash-dependency.patch

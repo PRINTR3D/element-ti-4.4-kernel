@@ -1,0 +1,11 @@
+Package: qtwebkit-mkspecs
+Version: 5.5.0+git0+3f0fbb46e2-r0-arago4
+Description: qtwebkit version 5.5.0+gitAUTOINC+3f0fbb46e2-r0-arago4
+ qtwebkit version 5.5.0+gitAUTOINC+3f0fbb46e2-r0-arago4.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD & LGPLv2+ | GPL-2.0
+Architecture: cortexa8hf-vfp-neon
+OE: qtwebkit
+Source: git://code.qt.io/qt/qtwebkit.git;branch=5.5 file://0001-qtwebkit-fix-QA-issue-bad-RPATH.patch file://0002-Remove-TEXTREL-tag-in-x86.patch file://0003-Exclude-backtrace-API-for-non-glibc-libraries.patch file://GraphicsSurfaceGL_NoX.cpp.patch file://GraphicsSurfaceToken.h.patch file://0001-Target.pri-update-to-use-GL_NoX-version-of-GraphicsS.patch file://WebCore.pri.patch

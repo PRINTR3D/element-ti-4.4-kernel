@@ -1,0 +1,11 @@
+Package: amx3-cm3
+Version: 1.9.1-r2
+Description: amx3-cm3 version 1.9.1-r2
+ Cortex-M3 binary blob for suspend-resume
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD-3-Clause
+Architecture: cortexa8hf-vfp-neon
+OE: amx3-cm3
+Source: git://git.ti.com/processor-firmware/ti-amx3-cm3-pm-firmware.git;protocol=git;branch=ti-v4.1.y

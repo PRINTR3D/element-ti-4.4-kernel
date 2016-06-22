@@ -1,0 +1,14 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 Sensors
+Description: Qt Sensors module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5Sensors 
+Libs.private: -lQt5Core -lpthread   
+Cflags: -I${includedir}/QtSensors -I${includedir}
+Requires: Qt5Core
+

@@ -1,0 +1,13 @@
+Package: omap5-sgx-ddk-um-linux-plugins
+Version: 1.9.0.12-r14
+Description: omap5-sgx-ddk-um-linux version 1.9.0.12-r14
+ Userspace libraries for SGX
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: TI-TSPA
+Architecture: am335x_evm
+OE: omap5-sgx-ddk-um-linux
+Homepage: http://downloads.ti.com/dsps/dsps_public_sw/gfxsdk
+Depends: omap5-sgx-ddk-um-linux
+Source: git://git.ti.com/graphics/omap5-sgx-ddk-um-linux.git;protocol=git;branch=am3/k4.1 file://rc.pvr file://powervr.ini

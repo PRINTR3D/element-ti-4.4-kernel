@@ -1,0 +1,15 @@
+Package: nettle-dev
+Version: 2.7.1-r0
+Description: A low level cryptographic library - Development files
+ A low level cryptographic library.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: LGPLv2.1 & GPLv2
+Architecture: cortexa8hf-vfp-neon
+OE: nettle
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Depends: nettle (= 2.7.1-r0)
+Recommends: libc6-dev, libgmp-dev
+Source: http://www.lysator.liu.se/~nisse/archive/nettle-2.7.1.tar.gz

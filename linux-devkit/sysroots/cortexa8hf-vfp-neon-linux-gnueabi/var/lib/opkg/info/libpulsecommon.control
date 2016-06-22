@@ -1,0 +1,13 @@
+Package: libpulsecommon
+Version: 6.0-r0-arago0
+Description: Sound server for Linux and Unix-like operating systems
+ Sound server for Linux and Unix-like operating systems.
+Section: libs/multimedia
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+ & LGPLv2.1
+Architecture: cortexa8hf-vfp-neon
+OE: pulseaudio
+Homepage: http://www.pulseaudio.org
+Depends: libcap2 (>= 2.24), libjson-c2 (>= 0.12), libsndfile1 (>= 1.0.25), libdbus-1-3 (>= 1.8.10), libc6 (>= 2.19-2014.08-1-git)
+Source: http://freedesktop.org/software/pulseaudio/releases/pulseaudio-6.0.tar.xz file://volatiles.04_pulse

@@ -1,0 +1,14 @@
+prefix=/home/gtbldadm/processor-sdk-linux-fido-build/build-CORTEX_1/arago-tmp-external-linaro-toolchain/sysroots/am335x-evm/usr
+exec_prefix=${prefix}
+libdir=/usr/lib
+includedir=/usr/include/qt5
+
+
+Name: Qt5 QuickTest
+Description: Qt QuickTest module
+Version: 5.5.0
+Libs: -L${libdir} -lQt5QuickTest 
+Libs.private: -lQt5Widgets -lQt5Gui -lQt5Core -lpthread  -lQt5Quick -lQt5Qml -lQt5Test -lQt5Gui -lQt5Network -lQt5Core -lpthread -lGLESv2 -lsrv_um  
+Cflags: -I${includedir}/QtQuickTest -I${includedir}
+Requires: Qt5Core Qt5Widgets
+

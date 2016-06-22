@@ -1,0 +1,15 @@
+Package: libcurl4
+Version: 7.40.0-r0
+Description: Command line tool and library for client-side URL transfers
+ Command line tool and library for client-side URL transfers.
+Section: console/network
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: cortexa8hf-vfp-neon
+OE: curl
+Homepage: http://curl.haxx.se/
+Depends: libssl1.0.0 (>= 1.0.2d), libz1 (>= 1.2.8), libc6 (>= 2.19-2014.08-1-git), libcrypto1.0.0 (>= 1.0.2d)
+Recommends: ca-certificates
+Provides: libcurl
+Source: http://curl.haxx.se/download/curl-7.40.0.tar.bz2 file://pkgconfig_fix.patch file://CVE-2015-3143.patch file://CVE-2015-3144.patch file://CVE-2015-3145.patch file://CVE-2015-3148.patch file://configure_ac.patch

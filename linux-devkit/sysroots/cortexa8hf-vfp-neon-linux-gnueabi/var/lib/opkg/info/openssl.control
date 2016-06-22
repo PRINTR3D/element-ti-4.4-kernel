@@ -1,0 +1,13 @@
+Package: openssl
+Version: 1.0.2d-r0-arago0
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+Section: libs/network
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: openssl
+Architecture: cortexa8hf-vfp-neon
+OE: openssl
+Homepage: http://www.openssl.org/
+Depends: libssl1.0.0 (>= 1.0.2d), libc6 (>= 2.19-2014.08-1-git), libcrypto1.0.0 (>= 1.0.2d), cryptodev-module
+Source: http://www.openssl.org/source/openssl-1.0.2d.tar.gz file://configure-targets.patch file://shared-libs.patch file://oe-ldflags.patch file://engines-install-in-libdir-ssl.patch file://debian1.0.2/block_diginotar.patch file://debian1.0.2/block_digicert_malaysia.patch file://debian/ca.patch file://debian/c_rehash-compat.patch file://debian/debian-targets.patch file://debian/man-dir.patch file://debian/man-section.patch file://debian/no-rpath.patch file://debian/no-symbolic.patch file://debian/pic.patch file://debian/version-script.patch file://openssl_fix_for_x32.patch file://fix-cipher-des-ede3-cfb1.patch file://openssl-avoid-NULL-pointer-dereference-in-EVP_DigestInit_ex.patch file://find.pl file://openssl-fix-des.pod-error.patch file://Makefiles-ptest.patch file://ptest-deps.patch file://run-ptest file://crypto_use_bigint_in_x86-64_perl.patch file://0001-cryptodev-Fix-issue-with-signature-generation.patch file://0001-Add-AF_ALG-interface-support-to-OpenSSL.patch file://0004-Sample-AF_ALG-openssl.cnf.patch file://0009-eng_cryptodev-Add-SHA224-initialization-to-cryptodev.patch

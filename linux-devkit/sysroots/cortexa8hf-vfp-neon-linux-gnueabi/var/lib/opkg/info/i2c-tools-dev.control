@@ -1,0 +1,14 @@
+Package: i2c-tools-dev
+Version: 3.1.1-r0
+Description: Set of i2c tools for linux - Development files
+ Set of i2c tools for linux.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: cortexa8hf-vfp-neon
+OE: i2c-tools
+Depends: i2c-tools (= 3.1.1-r0)
+Recommends: libc6-dev, perl-dev, i2c-tools-misc-dev
+Source: http://dl.lm-sensors.org/i2c-tools/releases/i2c-tools-3.1.1.tar.bz2 file://Module.mk

@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include/gstreamer-1.0
+
+Name: GStreamer EGL
+Description: GStreamer EGL library
+Requires: gstreamer-1.0
+Version: 1.2.3
+Libs: -L${libdir} -lgstegl-1.0 -lEGL -lIMGegl -ldrm_omap -lsrv_um 
+Cflags: -I${includedir} 
+

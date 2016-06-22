@@ -1,0 +1,17 @@
+Package: coreutils-dev
+Version: 8.23-r0
+Description: The basic file, shell and text manipulation utilities - Development files
+ The GNU Core Utilities provide the basic file, shell and text
+ manipulation utilities. These are the core utilities which are expected
+ to exist on every system.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv3+
+Architecture: cortexa8hf-vfp-neon
+OE: coreutils
+Homepage: http://www.gnu.org/software/coreutils/
+Depends: coreutils (= 8.23-r0)
+Recommends: libc6-dev, libattr-dev, libcap-dev, update-alternatives-opkg-dev, libgmp-dev
+Source: http://ftp.gnu.org/gnu/coreutils/coreutils-8.23.tar.xz;name=tarball http://distfiles.gentoo.org/distfiles/coreutils-8.23-man.tar.xz;name=manpages file://man-decouple-manpages-from-build.patch file://remove-usr-local-lib-from-m4.patch file://fix-selinux-flask.patch
