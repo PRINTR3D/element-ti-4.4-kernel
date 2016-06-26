@@ -115,7 +115,7 @@
 	};
 
 	captouch: edt-ft5x06@38 {
-		compatible = "edt,edt-ft5206", "edt,edt-ft5x06";
+		compatible = "edt,edt-ft5x06", "edt,edt-ft5206";
 		reg = <0x38>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&ctp_pins_default>;
